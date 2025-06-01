@@ -8,71 +8,72 @@ body {
   min-height: 100vh;
 }
 
-.filme-container {
+.sessao-container {
   max-width: 600px;
   margin: 0 auto;
   padding: 2rem;
   animation: fadeIn 0.8s ease-out;
 }
 
-/* Card do formulário */
-.filme-card {
+.sessao-card {
   background: rgba(0, 0, 0, 0.85);
   padding: 2.5rem;
   border-radius: 15px;
   box-shadow: 
-    0 0 25px rgba(150, 40, 255, 0.3),
-    0 0 15px rgba(150, 40, 255, 0.3) inset;
-  border: 1px solid rgba(150, 40, 255, 0.3);
+    0 0 25px rgba(255, 255, 255, 0.15),
+    0 0 15px rgba(255, 255, 255, 0.1) inset;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
 }
-
-/* Título estilizado */
-.filme-title {
+.sessao-title {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 2.2rem;
-  color: #b388ff;
-  text-shadow: 0 0 10px rgba(150, 40, 255, 0.5);
+  color: #ffffff; /* dourado para destaque */
+  text-shadow: 
+    0 0 10px rgba(241, 240, 229, 0.7),
+    0 0 20px rgba(243, 243, 243, 0.5);
   position: relative;
   padding-bottom: 10px;
 }
 
-.filme-title::after {
+.sessao-title::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 25%;
   width: 50%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #b388ff, transparent);
+  background: linear-gradient(90deg, transparent, #ffffff, transparent);
 }
 
-/* Labels */
-.filme-card .form-label {
-  color: #b388ff;
-  font-weight: 500;
+
+.form-label {
+  color: #ccc;
+  font-weight: 600;
   margin-bottom: 0.5rem;
+  display: block;
 }
 
-/* Inputs */
-.filme-card .form-control {
+.form-control {
+  width: 100%;
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(150, 40, 255, 0.3);
-  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #eee;
   padding: 12px 15px;
   margin-bottom: 1.5rem;
+  border-radius: 6px;
   transition: all 0.3s;
 }
 
-.filme-card .form-control:focus {
+.form-control:focus {
   background: rgba(255, 255, 255, 0.15);
-  border-color: #b388ff;
-  box-shadow: 0 0 0 0.25rem rgba(179, 136, 255, 0.35);
-  color: white;
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.2);
+  color: #fff;
+  outline: none;
 }
 
-/* Botão */
 .btn-success {
   background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
   border: none;
@@ -82,11 +83,13 @@ body {
   transition: all 0.3s;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
+  color: #fff;
 }
 
 .btn-success:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(106, 17, 203, 0.3);
+  box-shadow: 0 10px 20px rgba(106, 17, 203, 0.4);
 }
 
 .btn-success::after {
@@ -104,19 +107,17 @@ body {
   left: 100%;
 }
 
-/* Animação */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
-  .filme-container {
+  .sessao-container {
     padding: 1rem;
   }
 
-  .filme-card {
+  .sessao-card {
     padding: 1.5rem;
   }
 }
